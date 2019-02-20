@@ -9,10 +9,10 @@
         <input type="text" v-model="newUserEmail" placeholder="Email">
         </div>
         <div>
-        <input type="text" v-model="newUserPassword" placeholder="Password">
+        <input type="text" v-model="newUserPassword" placeholder="Pawsword">
         </div>
         <div>
-        <input type="text" v-model="newUserPasswordVerification" placeholder="Confirm Password">
+        <input type="text" v-model="newUserPasswordVerification" placeholder="Confirm Pawsword">
         </div>
         <input type="submit" value="Join">
       </form>
@@ -22,7 +22,7 @@
           <input type="text" v-model="userEmail" placeholder="Email">
         </div>
         <div>
-        <input type="text" v-model="userPassword" placeholder="Password">
+        <input type="text" v-model="userPassword" placeholder="Pawsword">
         </div>
         <input type="submit" value="Login">
       </form>
