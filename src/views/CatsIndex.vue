@@ -37,6 +37,8 @@ export default {
       this.cats = response.data;
     });
   },
-  methods: {}
+  methods: {
+    
+  }
 };
 </script>
