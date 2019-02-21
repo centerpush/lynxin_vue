@@ -1,7 +1,7 @@
 <template>
   <div class="welcome">
 
-    <div>
+    <div class="form">
       <form>
       <h1>Sign Up</h1>
         <p>Find your own definition of success with help from an inspiring professional cat community</p>
@@ -16,7 +16,7 @@
         </div>
         <input type="submit" value="Join">
       </form>
-      <form>
+      <!-- <form>
         <h1>Login</h1>
         <div>
           <input type="text" v-model="userEmail" placeholder="Email">
@@ -25,13 +25,19 @@
         <input type="text" v-model="userPassword" placeholder="Pawsword">
         </div>
         <input type="submit" value="Login">
-      </form>
+      </form> -->
     </div>
 
   </div>
 </template>
 
 <style>
+
+.form{
+
+
+padding-top: 50px;
+}
   
 </style>
 
