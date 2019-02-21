@@ -35,7 +35,6 @@
 
 .form{
 
-
 padding-top: 50px;
 }
   
