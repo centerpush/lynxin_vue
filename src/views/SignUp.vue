@@ -23,7 +23,15 @@
           <label>Password confirmation:</label>
           <input type="password" class="form-control" v-model="passwordConfirmation">
         </div>
-        <input type="submit" class="btn btn-primary" value="Join">
+        <div class="button_join"> 
+          <input type="submit" class="btn btn-primary" value="Join">
+         <div class="already">
+            <label >Already a member?</label>
+          <div>
+            <router-link v-bind:to="'/login'">Login here!</router-link>
+          </div>
+         </div>
+        </div>
       </form>
     </div>
   </div>
@@ -36,6 +44,12 @@
   }
   p{
     text-align: center;
+  }
+  .button_join{
+    text-align: center;
+  }
+  .already{
+    padding-top: 10px;
   }
 </style>
 
