@@ -1,7 +1,10 @@
 body{
   background-image: url('BeFunky-collage.png');
-  background-size:     cover;                    
-  background-repeat:   no-repeat;
-  background-position: center center; 
+  background-size: 85% ; 
+  /*background-repeat: no-repeat;*/
+  background-position: right top; 
+  }
 
+  .signup{
+   
   }
