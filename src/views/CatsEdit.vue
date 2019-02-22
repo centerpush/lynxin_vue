@@ -1,57 +1,72 @@
 <template>
   <div class="cats-edit">
-    <h1>Edit Profile</h1>
 
     <ul>
       <li v-for="error in errors"{{ error }}</li>
     </ul>
-    
-    <form v-on:submit.prevent="submit()">
-      <div>
-        First Name: <input v-model="cat.first_name" placeholder="First Name">
-      </div>
-      <div>
-        Family Name: <input v-model="cat.family_name" placeholder="Family Name">
-      </div>
-      <div>
-        Title: <input v-model="cat.title" placeholder="Title">
-      </div>
-      <div>
-        Education  <input v-model="cat.education" placeholder="Education">
-      </div>
-      <div>
-        Experience  <input v-model="cat.experience" placeholder="Experience">
-      </div>
-      <div>
-        Location  <input v-model="cat.location" placeholder="Location">
-      </div>
-      <div>
-        Owner: <input v-model="cat.owner" placeholder="Owner">
-      </div>
-      <div>
-        Summary: <input v-model="cat.summary" placeholder="Summary">
-      </div>
-      <div>
-        Profile url: <input v-model="cat.profile_url" placeholder="Profile url">
-      </div>
-      <div>
-        Accomplishments: <input v-model="cat.accomplishments" placeholder="Accomplishments">
-      </div>
-      <div>
-        Endorsements: <input v-model="cat.endorsements" placeholder="Endorsements">
-      </div>
-      <div>
-        Skills  <input v-model="cat.skills" placeholder="Skills">
-      </div>
-      
-      <input type="submit" value="Update" class="btn btn-warning">
-    </form>
+    <div class='container'>
+      <h2>Edit Profile</h2>
+      <form v-on:submit.prevent="submit()">
+        <div class="form-group">
+          <label>First Name: </label>
+          <input class='form-control' type='text' v-model="cat.first_name" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <label>Family Name: </label>
+          <input class='form-control' type='text' v-model="cat.family_name" placeholder="Family Name">
+        </div>
+        <div class="form-group">
+          <label>Title: </label>
+          <input class='form-control' type='text' v-model="cat.title" placeholder="Title">
+        </div>
+        <div class="form-group">
+          <label>Education: </label>
+          <input class='form-control' type='text' v-model="cat.education" placeholder="Education">
+        </div>
+        <div class="form-group">
+          <label>Experience: </label>
+          <input class='form-control' type='text' v-model="cat.experience" placeholder="Experience">
+        </div>
+        <div class="form-group">
+          <label>Location: </label>
+          <input class='form-control' type='text' v-model="cat.location" placeholder="Location">
+        </div>
+        <div class="form-group">
+          <label>Owner: </label>
+          <input class='form-control' type='text' v-model="cat.owner" placeholder="Owner">
+        </div>
+        <div class="form-group">
+          <label>Summary: </label>
+          <input class='form-control' type='text' v-model="cat.summary" placeholder="Summary">
+        </div>
+        <div class="form-group">
+          <label>Profile: </label>
+          <input class='form-control' type='text' v-model="cat.profile_url" placeholder="Profile url">
+        </div>
+        <div class="form-group">
+          <label>Accomplishments: </label>
+          <input class='form-control' type='text' v-model="cat.accomplishments" placeholder="Accomplishments">
+        </div>
+        <div class="form-group">
+          <label>Endorsements: </label>
+          <input class='form-control' type='text' v-model="cat.endorsements" placeholder="Endorsements">
+        </div>
+        <div class="form-group">
+          <label>Skills: </label>
+          <input class='form-control' id='' type='text' v-model="cat.skills" placeholder="Skills">
+        </div>
+        
+        <input type="submit" value="Update" class="btn btn-primary">
+      </form>
+    </div>
   </div>
 </template>
 
 
 <style>
-  
+.btn{
+  align-self: center;
+}
 </style>
 
 
