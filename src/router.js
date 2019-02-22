@@ -21,8 +21,8 @@ export default new Router({
     { path: '/login', name: 'login', component: Login },
     { path: '/logout', name: 'logout', component: Logout },
     { path: '/cats', name: 'cats-index', component: CatsIndex },
-    { path: '/cats/:id', name: 'cats-show', component: CatsShow },
     { path: '/cats/new', name: 'cats-new', component: CatsNew },
+    { path: '/cats/:id', name: 'cats-show', component: CatsShow },
     { path: '/cats/:id/edit', name: 'cats-edit', component: CatsEdit },
     { path: '/cats/:id/catnections', name: 'cats-connections', component: CatsConnections}
   ]
