@@ -95,13 +95,7 @@ export default {
       errors: []
     };
   },
-  created: function() {
-    axios.get("/api/cats/" + this.$route.params.id)
-      .then(response => {
-        console.log(response.data);
-        this.cat = response.data;
-      })
-  },
+  created: function() {},
   methods: {
     submit: function() {
       var params = {
@@ -119,7 +113,7 @@ export default {
                     skills: this.cat.skills,
                     user_id: this.cat.user_id
                     };
-      axios.patch("/api/cats/" + this.cat.id, params)
+      axios.post("/api/cats", params)
         .then(response => {
           this.$router.push("/cats/" + this.cat.id);
         }).catch(error => {
