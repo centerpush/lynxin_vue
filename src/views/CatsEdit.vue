@@ -103,7 +103,7 @@ export default {
                     skills: this.cat.skills,
                     user_id: this.cat.user_id
                     };
-      axios.patch("/api/cats/" + cat.id, params)
+      axios.patch("/api/cats/" + this.cat.id, params)
         .then(response => {
           this.$router.push("/cats/" + this.cat.id);
         }).catch(error => {
