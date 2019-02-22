@@ -2,7 +2,8 @@
   <div class="sign-up">
     <div class="container">
       <form v-on:submit.prevent="submit()">
-        <h1>Signup</h1>
+        <h2>We're in it together, you know, when we feel like it</h2>
+        <p>Find your own definition of success with help from an inspiring professional feline community</p>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
@@ -22,11 +23,21 @@
           <label>Password confirmation:</label>
           <input type="password" class="form-control" v-model="passwordConfirmation">
         </div>
-        <input type="submit" class="btn btn-primary" value="Submit">
+        <input type="submit" class="btn btn-primary" value="Join">
       </form>
     </div>
   </div>
 </template>
+
+<style>
+  h2{
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  p{
+    text-align: center;
+  }
+</style>
 
 <script>
 import axios from "axios";
