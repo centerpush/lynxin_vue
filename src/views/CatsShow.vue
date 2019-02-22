@@ -1,39 +1,39 @@
 <template>
   <div class="cats-show">
-    <div class="container">
+    <div class="card" style="width: 60rem;">
+      <img :src="'http://www.catster.com/wp-content/uploads/2018/01/Orange-tabby-cat-sleeping-with-eyes-closed.jpg'" class="card-img-top img-thumbnail" alt="Not loading">
+      
+      <div class="card-body">
+        <h5 class="card-title">{{ cat.first_name  }} {{  cat.family_name}}</h5>
+        <p class="card-text">{{ cat.title }}</p>
+        <p class="card-text">{{ cat.location }}</p>
+        <p class="card-text">{{ cat.ownder }}</p>
+        <p class="card-text">{{ cat.summary }}</p>
+        <a href="#" class="btn btn-primary">Connect</a>
+      </div>
+
       <div class="card" style="width: 60rem;">
-        <!-- <img :src='cat.profile_url' class="card-img-top" alt="Not loading"> -->
         <div class="card-body">
-          <h5 class="card-title">{{ cat.first_name  }} {{  cat.family_name}}</h5>
-          <p class="card-text">{{ cat.title }}</p>
-          <p class="card-text">{{ cat.location }}</p>
-          <p class="card-text">{{ cat.ownder }}</p>
-          <p class="card-text">{{ cat.summary }}</p>
-          <a href="#" class="btn btn-primary">Connect</a>
+          <p class="card-text">{{ cat.experience }}</p>
+          <p class="card-text">{{ cat.education }}</p>
         </div>
+      </div>
 
-        <div class="card" style="width: 60rem;">
-          <div class="card-body">
-            <p class="card-text">{{ cat.experience }}</p>
-            <p class="card-text">{{ cat.education }}</p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 60rem;">
-          <div class="card-body">
-            <p class="card-text">{{ cat.skills }}</p>
-            <p class="card-text">{{ cat.endorsements }}</p>
-            <p class="card-text">{{ cat.accomplishments }}</p>
-          </div>
+      <div class="card" style="width: 60rem;">
+        <div class="card-body">
+          <p class="card-text">{{ cat.skills }}</p>
+          <p class="card-text">{{ cat.endorsements }}</p>
+          <p class="card-text">{{ cat.accomplishments }}</p>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
 <style>
-  
+.card{
+
+}
 </style>
 
 <script>
