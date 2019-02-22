@@ -32,12 +32,13 @@
 </template>
 
 <style>
-
 .form{
 
 padding-top: 50px;
 }
-  
+h1{
+  text-align: center;
+}
 </style>
 
 <script>
