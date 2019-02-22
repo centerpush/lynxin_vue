@@ -1,9 +1,18 @@
 body{
   background-image: url('BeFunky-collage.png');
-  background-size:     cover;                    
-  background-repeat:   no-repeat;
-  background-position: center center; 
+  background-size: 85%; 
+  background-position: right top; 
 }
+
+.container{
+  background-color: white;
+  box-sizing: border-box;
+  padding: 25px ;
+  width: 410px;
+  margin-top: 50px
+}
+
 .card-img-top {
   backgroud-image: url('weather.png');
 }
+
