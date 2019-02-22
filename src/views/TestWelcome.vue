@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="test-welcome">
     <div class="container">
       <div class="row">
@@ -190,4 +190,4 @@ export default {
   created: function() {},
   methods: {}
 };
-</script>
+</script> -->
