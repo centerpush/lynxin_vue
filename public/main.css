@@ -3,5 +3,7 @@ body{
   background-size:     cover;                    
   background-repeat:   no-repeat;
   background-position: center center; 
-
-  }
+}
+.card-img-top {
+  backgroud-image: url('weather.png');
+}
