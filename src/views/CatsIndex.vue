@@ -1,9 +1,10 @@
 <template>
   <div class="cats-index">
-    <div class="row">
+    <div class="card-deck">
       <div class="col-md-4" v-for="cat in cats">
-        <div class="card">
+        <div class="card mt-3">
           <h2 class="card-title text-center" > {{ cat.first_name }}</h2>
+          <p class="card-text">{{ cat.title }}</p>
           <router-link v-bind:to="'/cats/' + cat.id">
             <img class="card-img-top" v-bind:src="cat.profile_url" v-bind:alt="cat.first_name">
           </router-link>
@@ -15,6 +16,11 @@
 </template>
 
 <style>
+img{
+  height: 225px;
+  width: 250px;
+}
+
 </style>
 
 <script>

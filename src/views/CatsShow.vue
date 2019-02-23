@@ -52,42 +52,43 @@
 </template>
 
 <style>
-p{
+.cats-show p{
   margin-bottom: 12px;
   text-align: left;
 }
-.card{
+
+.cats-show .card{
   width: 791px;
   margin-left: 119px;
   margin-bottom: 19px;
 }
-#banner-image{
+.cats-show #banner-image{
   height: 269px;
   width: 791px;
   margin-left: 119px;
 }
-.card-title{
+.cats-show .card-title{
   text-align: left;
   margin-left: 25px;
   margin-top: 10px;
   font-size: 30px;
 }
-.card-text{
+.cats-show .card-text{
   text-align: left;
   margin-left: 25px;
 }
-#title{
+.cats-show #title{
   font-size: 24px;
 }
-#location{
+.cats-show #location{
   font-size: 16px;
   color: #676767;
 }
-#connect-btn{
+.cats-show #connect-btn{
   margin-right: 25px;
   margin-bottom: 20px;
 }
-#sub-header{
+.cats-show #sub-header{
   font-size: 24px;
 }
 </style>
