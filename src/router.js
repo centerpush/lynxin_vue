@@ -18,8 +18,8 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     { path: '/cats', name: 'cats-index', component: CatsIndex },
-    { path: '/cats/:id', name: 'cats-show', component: CatsShow },
     { path: '/cats/new', name: 'cats-new', component: CatsNew },
+    { path: '/cats/:id', name: 'cats-show', component: CatsShow },
     { path: '/cats/:id/edit', name: 'cats-edit', component: CatsEdit },
     { path: '/cats/:id/catnections', name: 'cats-connections', component: CatsConnections},
     { path: '/', name: 'sign-up', component: SignUp },
