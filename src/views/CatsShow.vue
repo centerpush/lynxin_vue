@@ -1,26 +1,94 @@
 <template>
   <div class="cats-show">
-    <h5 class="card-title">{{ cat.first_name  }} {{  cat.family_name}}</h5>
-    <p class="card-text">{{ cat.title }}</p>
-    <p class="card-text">{{ cat.location }}</p>
-    <p class="card-text">{{ cat.ownder }}</p>
-    <p class="card-text">{{ cat.summary }}</p>
-    <a href="#" class="btn btn-primary">Connect</a>
+    <div class="profile-card">
+      <div>
+        <img id="banner-image" src="https://www.eandl.co.uk/2015/images/pet-banner-cat.jpg" alt="doesn't work">
+      </div>
+      <div class="card">
+        <p class="card-title">{{ cat.first_name  }} {{  cat.family_name}}</p>
+        <p class="card-text" id="title">{{ cat.title }}</p>
+        <p class="card-text" id="location">{{ cat.location }}</p>
+        <p class="card-text">Owner: {{ cat.owner }}</p>
+        <div id="connect-btn" class="text-right">
+          <a href="#" class="btn btn-primary">Connect</a>
+        </div>
+        <div id="accordion">
+          <div>
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Summary: 
+                </button>
+              </h5>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                {{ cat.summary }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <p class="card-title" id="sub-header">Experience:</p>
+      <p class="card-text" id="experience">{{ cat.experience }}</p>
+      <hr />
+      <p class="card-title" id="sub-header">Education:</p>
+      <p class="card-text">{{ cat.education }}</p>
+    </div>
 
-    <br>
-    <p class="card-text">{{ cat.experience }}</p>
-    <p class="card-text">{{ cat.education }}</p>
-
-    <br>
-    <p class="card-text">{{ cat.skills }}</p>
-    <p class="card-text">{{ cat.endorsements }}</p>
-    <p class="card-text">{{ cat.accomplishments }}</p>
+    <div class="card">
+      <p class="card-title" id="sub-header">Skills:</p>
+      <p class="card-text">{{ cat.skills }}</p>
+      <hr />
+      <p class="card-title" id="sub-header">Endorsements:</p>
+      <p class="card-text">{{ cat.endorsements }}</p>
+      <hr />
+      <p class="card-title" id="sub-header">Accomplishments:</p>
+      <p class="card-text">{{ cat.accomplishments }}</p>
+    </div>
   </div>
 </template>
 
 <style>
-template{
-  background-image: url('weather.png');
+p{
+  margin-bottom: 12px;
+  text-align: left;
+}
+.card{
+  width: 791px;
+  margin-left: 119px;
+  margin-bottom: 19px;
+}
+#banner-image{
+  height: 269px;
+  width: 791px;
+  margin-left: 119px;
+}
+.card-title{
+  text-align: left;
+  margin-left: 25px;
+  margin-top: 10px;
+  font-size: 30px;
+}
+.card-text{
+  text-align: left;
+  margin-left: 25px;
+}
+#title{
+  font-size: 24px;
+}
+#location{
+  font-size: 16px;
+  color: #676767;
+}
+#connect-btn{
+  margin-right: 25px;
+  margin-bottom: 20px;
+}
+#sub-header{
+  font-size: 24px;
 }
 </style>
 
