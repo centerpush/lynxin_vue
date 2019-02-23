@@ -1,5 +1,14 @@
 <template>
   <div class="cats-show">
+    <h2> {{ cats.first  }} </h2>
+    <h2> {{ cats.title  }} </h2>
+    <h2> {{ cats.title  }} </h2>
+    <h2> {{ cats.title  }} </h2>
+    <h2> {{ cats.title  }} </h2>
+    <h2> {{ cats.title  }} </h2>
+    <h2> {{ cats.title  }} </h2>
+    <h2> {{ cats.title  }} </h2>
+    <h2> {{ cats.title  }} </h2>
     <h2> {{ cats.title  }} </h2>
   </div>
 </template>

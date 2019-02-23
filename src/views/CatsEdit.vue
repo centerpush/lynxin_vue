@@ -35,6 +35,9 @@
         Profile url: <input v-model="cat.profile_url" placeholder="Profile url">
       </div>
       <div>
+        Profile Picture: <input type="file" v-on:change="setFile($event)" ref="fileInput">      
+      </div>
+      <div>
         Accomplishments: <input v-model="cat.accomplishments" placeholder="Accomplishments">
       </div>
       <div>
@@ -43,7 +46,6 @@
       <div>
         Skills  <input v-model="cat.skills" placeholder="Skills">
       </div>
-      
       <input type="submit" value="Update" class="btn btn-warning">
     </form>
   </div>
@@ -71,6 +73,7 @@ export default {
               owner: "",
               summary: "",
               profile_url: "",
+              profile_picture: "",
               accomplishments: "",
               endorsements: "",
               skills: "",
@@ -87,6 +90,11 @@ export default {
       })
   },
   methods: {
+    setFile: function(event) {
+         if (event.target.files.length > 0) {
+           this.image = event.target.files[0];
+         }
+       },
     submit: function() {
       var params = {
                     first_name: this.cat.first_name,
@@ -98,6 +106,7 @@ export default {
                     owner: this.cat.owner,
                     summary: this.cat.summary,
                     profile_url: this.cat.profile_url,
+                    profile_picture: this.cat.profile_picture,
                     accomplishments: this.cat.accomplishments,
                     endorsements: this.cat.endorsements,
                     skills: this.cat.skills,
@@ -106,6 +115,7 @@ export default {
       axios.patch("/api/cats/" + cat.id, params)
         .then(response => {
           this.$router.push("/cats/" + this.cat.id);
+          this.$refs.fileInput.value = "";
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
