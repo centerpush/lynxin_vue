@@ -1,38 +1,26 @@
 <template>
   <div class="cats-show">
-    <div class="card" style="width: 60rem;">
-      <img :src="'http://www.catster.com/wp-content/uploads/2018/01/Orange-tabby-cat-sleeping-with-eyes-closed.jpg'" class="card-img-top img-thumbnail" alt="Not loading">
-      
-      <div class="card-body">
-        <h5 class="card-title">{{ cat.first_name  }} {{  cat.family_name}}</h5>
-        <p class="card-text">{{ cat.title }}</p>
-        <p class="card-text">{{ cat.location }}</p>
-        <p class="card-text">{{ cat.ownder }}</p>
-        <p class="card-text">{{ cat.summary }}</p>
-        <a href="#" class="btn btn-primary">Connect</a>
-      </div>
+    <h5 class="card-title">{{ cat.first_name  }} {{  cat.family_name}}</h5>
+    <p class="card-text">{{ cat.title }}</p>
+    <p class="card-text">{{ cat.location }}</p>
+    <p class="card-text">{{ cat.ownder }}</p>
+    <p class="card-text">{{ cat.summary }}</p>
+    <a href="#" class="btn btn-primary">Connect</a>
 
-      <div class="card" style="width: 60rem;">
-        <div class="card-body">
-          <p class="card-text">{{ cat.experience }}</p>
-          <p class="card-text">{{ cat.education }}</p>
-        </div>
-      </div>
+    <br>
+    <p class="card-text">{{ cat.experience }}</p>
+    <p class="card-text">{{ cat.education }}</p>
 
-      <div class="card" style="width: 60rem;">
-        <div class="card-body">
-          <p class="card-text">{{ cat.skills }}</p>
-          <p class="card-text">{{ cat.endorsements }}</p>
-          <p class="card-text">{{ cat.accomplishments }}</p>
-        </div>
-      </div>
-    </div>
+    <br>
+    <p class="card-text">{{ cat.skills }}</p>
+    <p class="card-text">{{ cat.endorsements }}</p>
+    <p class="card-text">{{ cat.accomplishments }}</p>
   </div>
 </template>
 
 <style>
-.card{
-
+template{
+  background-image: url('weather.png');
 }
 </style>
 
