@@ -21,6 +21,9 @@
 </template>
 
 <style>
+.navbar{
+  height: 52px;
+}
 .navbar-brand{
   font-size: 35px;
 }
