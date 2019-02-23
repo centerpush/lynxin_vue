@@ -8,7 +8,7 @@
       <button>Sign Out</button> -->
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c3e49;" >
-      <a class="navbar-brand" href="/">LynxIn</a>
+      <a class="navbar-brand" href="/">LynxIn 🐈</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -17,40 +17,15 @@
         <ul class="navbar-nav mr-auto">
         </ul>
         <form class="form-inline my-2 my-lg-0">
-<!--           <div>Login Here!</div> -->
-          <input class="form-control mr-sm-2" type="search" placeholder="Email" aria-label="Search">
-          <input class="form-control mr-sm-2" type="search" placeholder="Pawsword" aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit" style="color: #FFFFFF;"  >Sign In</button>
         </form>
       </div>
     </nav>
-    <!-- <div class="container"> -->
     <router-view/>
-  <!--   </div> -->
   </div>
 </template>
 
 <style>
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.navbar-brand{
+  font-size: 35px;
 }
-
-
-/*#nav {
-  padding: 30px;
-}*/
-
-/*#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}*/
-
-/*#nav a.router-link-exact-active {
-  color: #42b983;
-}*/
 </style>
