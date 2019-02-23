@@ -68,6 +68,9 @@
 .new-button{
   text-align: center
 }
+.container{
+  margin-bottom: 30px;
+}
 </style>
 
 
