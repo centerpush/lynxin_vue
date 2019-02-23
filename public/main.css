@@ -3,7 +3,6 @@ body{
   background-size: 85%; 
   background-position: right top; 
 }
-
 .container{
   background-color: white;
   box-sizing: border-box;
@@ -11,9 +10,3 @@ body{
   width: 410px;
   margin-top: 50px
 }
-
-.card-img-top {
-  backgroud-image: url('weather.png');
-}
-
-

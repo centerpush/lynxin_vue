@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Welcome from './views/Welcome.vue'
 import CatsIndex from './views/CatsIndex.vue'
 import CatsShow from './views/CatsShow.vue'
 import CatsNew from './views/CatsNew.vue'
