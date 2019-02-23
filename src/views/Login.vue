@@ -56,7 +56,7 @@ export default {
           axios.defaults.headers.common["Authorization"] =
             "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
-          this.$router.push("'/cats/'" + this.cat.id);
+          this.$router.push("/cats/new");
         })
         .catch(error => {
           this.errors = ["Invalid email or password."];
