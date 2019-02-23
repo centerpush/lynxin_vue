@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="welcome">
 
     <div class="form">
@@ -16,7 +16,7 @@
         </div>
         <input type="submit" value="Join">
       </form>
-      <!-- <form>
+      <form>
         <h1>Login</h1>
         <div>
           <input type="text" v-model="userEmail" placeholder="Email">
@@ -25,7 +25,7 @@
         <input type="text" v-model="userPassword" placeholder="Pawsword">
         </div>
         <input type="submit" value="Login">
-      </form> -->
+      </form>
     </div>
 
   </div>
@@ -57,4 +57,4 @@ export default {
   created: function() {},
   methods: {}
 };
-</script>
+</script> -->

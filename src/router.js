@@ -17,12 +17,12 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    { path: '/', name: 'sign-up', component: SignUp },
-    { path: '/login', name: 'login', component: Login },
-    { path: '/logout', name: 'logout', component: Logout },
     { path: '/cats', name: 'cats-index', component: CatsIndex },
     { path: '/cats/:id', name: 'cats-show', component: CatsShow },
     { path: '/cats/new', name: 'cats-new', component: CatsNew },
-    { path: '/cats/:id/edit', name: 'cats-edit', component: CatsEdit }
+    { path: '/cats/:id/edit', name: 'cats-edit', component: CatsEdit },
+    { path: '/', name: 'sign-up', component: SignUp },
+    { path: '/login', name: 'login', component: Login },
+    { path: '/logout', name: 'logout', component: Logout }
   ]
 })

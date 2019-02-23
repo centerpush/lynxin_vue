@@ -2,7 +2,7 @@
   <div class="sign-up">
     <div class="container">
       <form v-on:submit.prevent="submit()">
-        <h2>We're in it together, you know, when we feel like it</h2>
+        <h3>We're in it together, you know, when we feel like it</h3>
         <p>Find your own definition of success with help from an inspiring professional feline community</p>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
@@ -38,7 +38,7 @@
 </template>
 
 <style>
-  h2{
+  h3{
     text-align: center;
     padding-bottom: 10px;
   }
