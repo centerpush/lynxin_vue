@@ -2,13 +2,12 @@
   <div class="cats-index">
     <div class="row">
       <div class="col-md-4" v-for="cat in cats">
-          <div class="card">
-          <h2 class="card-title"> {{ cat.first_name }}</h2>
+        <div class="card">
+          <h2 class="card-title text-center" > {{ cat.first_name }}</h2>
           <router-link v-bind:to="'/cats/' + cat.id">
             <img class="card-img-top" v-bind:src="cat.profile_url" v-bind:alt="cat.first_name">
           </router-link>
           <p class="card-text">{{ cat.summary }}</p>
-          </div>
         </div>
       </div>
     </div>
