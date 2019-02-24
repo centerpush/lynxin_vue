@@ -2,10 +2,10 @@
   <div class="cats-show">
     <div class="profile-card">
       <div>
-        <img id="banner-image" src="https://www.eandl.co.uk/2015/images/pet-banner-cat.jpg" alt="doesn't work">
+        <img id="banner-image" src="http://www.wishbonespetcare.com/LRGpawprintbanner.png" alt="doesn't work">
       </div>
       <div class="card">
-        <p class="card-title">{{ cat.first_name  }} {{  cat.family_name}}</p>
+        <p class="card-title" id="first-family-name">{{ cat.first_name  }} {{  cat.family_name}}</p>
         <p class="card-text" id="title">{{ cat.title }}</p>
         <p class="card-text" id="location">{{ cat.location }}</p>
         <p class="card-text">Owner: {{ cat.owner }}</p>
@@ -30,6 +30,9 @@
         </div>
       </div>
     </div>
+    <div id="profile-img-location">
+      <img src="https://us.123rf.com/450wm/miceking/miceking1506/miceking150600428/40805956-stock-vector-cat-silhouette-moon.jpg?ver=6">
+    </div>
     <div class="card">
       <p class="card-title" id="sub-header">Experience:</p>
       <p class="card-text" id="experience">{{ cat.experience }}</p>
@@ -52,44 +55,61 @@
 </template>
 
 <style>
-.cats-show p{
+.cats-show p {
   margin-bottom: 12px;
   text-align: left;
 }
 
-.cats-show .card{
+.cats-show .card {
   width: 791px;
   margin-left: 119px;
   margin-bottom: 19px;
 }
-.cats-show #banner-image{
+.cats-show #banner-image {
   height: 269px;
   width: 791px;
   margin-left: 119px;
 }
-.cats-show .card-title{
+.cats-show .card-title {
   text-align: left;
   margin-left: 25px;
   margin-top: 10px;
   font-size: 30px;
 }
-.cats-show .card-text{
+.cats-show #first-family-name{
+  margin-top: 75px;
+}
+.cats-show .card-text {
   text-align: left;
   margin-left: 25px;
 }
-.cats-show #title{
+.cats-show #title {
   font-size: 24px;
 }
-.cats-show #location{
+.cats-show #location {
   font-size: 16px;
   color: #676767;
 }
-.cats-show #connect-btn{
+.cats-show #connect-btn {
   margin-right: 25px;
   margin-bottom: 20px;
 }
-.cats-show #sub-header{
+.cats-show #sub-header {
   font-size: 24px;
+}
+
+.cats-show #profile-img-location {
+  position:absolute;
+  width:0px;
+  height:0px;
+  background:red;
+  left:169px;
+  top:240px;
+}
+.cats-show #profile-img-location img {
+  height:160px;
+  with:160px;
+  border-radius: 50%;
 }
 </style>
 
