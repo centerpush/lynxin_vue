@@ -125,6 +125,10 @@ export default {
                     skills: this.cat.skills,
                     user_id: this.cat.user_id
                     };
+      console.log("====================================")
+      console.log(params)
+      console.log(this.cat)
+      console.log("====================================")
       axios.patch("/api/cats/" + this.cat.id, params)
         .then(response => {
           this.$router.push("/cats/" + this.cat.id);
