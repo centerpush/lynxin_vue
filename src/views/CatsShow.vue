@@ -10,7 +10,7 @@
         <p class="card-text" id="location">{{ cat.location }}</p>
         <p class="card-text">Owner: {{ cat.owner }}</p>
         <div id="connect-btn" class="text-right">
-          <a href="#" class="btn btn-primary">Connect</a>
+          <button v-on:click="connect()" class="btn btn-primary">Connect</button>
         </div>
         <div id="accordion">
           <div>
@@ -100,6 +100,7 @@ export default {
   data: function() {
     return {
       cat: {
+        id: "",
         first_name: "",
         family_name: "",
         title: "",
@@ -122,6 +123,11 @@ export default {
       this.cat = response.data;
     });
   },
-  methods: {}
+  methods: {
+    connect: function() {
+      var params = { followee_id: this.cat.id };
+      axios.post("/api/followings/", params);
+    }
+  }
 };
 </script>
