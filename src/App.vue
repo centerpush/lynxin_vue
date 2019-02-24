@@ -4,7 +4,7 @@
 
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c3e49;" >
-      <a class="navbar-brand" href="/">LynxIn 🐈</a>
+      <router-link class="navbar-brand" to="/cats">LynxIn 🐈 </router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

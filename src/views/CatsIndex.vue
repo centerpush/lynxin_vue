@@ -1,12 +1,36 @@
 <template>
   <div class="cats-index">
-    <div v-for="cat in cats">
-      <h2> {{ cat.first_name }} {{ cat.family_name }} </h2>      
+    <div class="card-deck">
+      <div class="col-md-4" v-for="cat in cats">
+        <div class="card mt-3">
+          <img class="card-img" src="https://www.toptal.com/designers/subtlepatterns/patterns/leaves.png">
+            <div class="card-img-overlay"> 
+              <h2 class="card-title text-center" > {{ cat.first_name }}</h2>
+              <p class="card-text ">{{ cat.title }}</p>
+              <router-link v-bind:to="'/cats/' + cat.id">
+                <img class="card-img-top rounded mx-auto d-block img-thumbnail" v-bind:src="cat.profile_url" v-bind:alt="cat.first_name">
+              </router-link>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style>
+.cats-index .card-img-top {
+  height: 225px;
+  width: 250px;
+}
+
+.cats-index .card {
+  opacity: 0.99;
+}
+
+.cats-index .card:hover {
+  box-shadow: 8px 8px 35px 3px whitesmoke;
+  opacity: 1;
+}
 </style>
 
 <script>

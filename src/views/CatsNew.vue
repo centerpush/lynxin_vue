@@ -2,7 +2,7 @@
   <div class="cats-new">
 
     <ul>
-      <li v-for="error in errors"{{ error }}</li>
+      <li v-for="error in errors"> {{ error }} </li>
     </ul>
     <div class='container'>
       <h2>Enter Basic Info</h2>
@@ -118,7 +118,7 @@ export default {
                     };
       axios.post("/api/cats", params)
         .then(response => {
-          this.$router.push("/cats/" + this.cat.id);
+          this.$router.push("/cats/" + response.data.id);
         }).catch(error => {
           this.errors = error.response.data.errors;
         });
