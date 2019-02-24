@@ -9,7 +9,7 @@
               <h2 class="card-title text-center" > {{ cat.first_name }}</h2>
               <p class="card-text ">{{ cat.title }}</p>
                 <img class="card-img-top rounded mx-auto d-block img-thumbnail" v-bind:src="cat.profile_url" v-bind:alt="cat.first_name">
-          </div>
+            </div>
           </router-link>
         </div>
       </div>

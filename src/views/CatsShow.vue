@@ -15,7 +15,7 @@
           <div class="col">
             <div id="action-buttons">
               <button v-on:click="connect()" class="btn btn-primary">Connect</button>
-              <button v-on:click="connect()" class="btn btn-primary">Edit Profile</button>
+              <button v-on:click="edit()" class="btn btn-primary">Edit Profile</button>
             </div>
           </div>
         </div>
@@ -40,7 +40,6 @@
     <div id="profile-img-location">
       <div class="profile-img"></div>
         <img class="shadow-lg" v-if="cat.profile_url" :src="cat.profile_url">
-        <img class="shadow-lg" v-else src="https://us.123rf.com/450wm/miceking/miceking1506/miceking150600428/40805956-stock-vector-cat-silhouette-moon.jpg?ver=6">
     </div>
     <div class="card">
       <p class="card-title" id="sub-header">Experience:</p>
@@ -158,6 +157,9 @@ export default {
     connect: function() {
       var params = { followee_id: this.cat.id };
       axios.post("/api/followings/", params);
+    },
+    edit: function() {
+      this.$router.push("/cats/" + this.cat.id + "/edit");
     }
   }
 };
