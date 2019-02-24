@@ -5,17 +5,20 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c3e49;" >
       <router-link class="navbar-brand" to="/cats">LynxIn 🐈 </router-link>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-        </form>
-      </div>
+      <ul class="nav">
+        <li class="nav-item justify-content-end">
+          <div v-if="">
+            <router-link class="nav-link" to="/logout">Logout</router-link>
+          </div>
+        </li>
+        <li>
+          <div v-if="">
+            <router-link class="nav-link" to="/login">Login</router-link>
+          </div>
+        </li>
+      </ul>
     </nav>
+
     <router-view/>
   </div>
 </template>
@@ -26,5 +29,8 @@
 }
 .navbar-brand{
   font-size: 35px;
+}
+.nav-link{
+  color: white;
 }
 </style>
