@@ -13,8 +13,9 @@
             <p class="card-text">Owner: {{ cat.owner }}</p>
           </div>
           <div class="col">
-            <div id="connect-btn">
+            <div id="action-buttons">
               <button v-on:click="connect()" class="btn btn-primary">Connect</button>
+              <button v-on:click="connect()" class="btn btn-primary">Edit Profile</button>
             </div>
           </div>
         </div>
@@ -37,8 +38,9 @@
       </div>
     </div>
     <div id="profile-img-location">
-      <img v-if="cat.profile_url" class="profile-img shadow-lg" :src="cat.profile_url">
-      <img v-else class="profile-img shadow-lg" src="https://us.123rf.com/450wm/miceking/miceking1506/miceking150600428/40805956-stock-vector-cat-silhouette-moon.jpg?ver=6">
+      <div class="profile-img"></div>
+        <img class="shadow-lg" v-if="cat.profile_url" :src="cat.profile_url">
+        <img class="shadow-lg" v-else src="https://us.123rf.com/450wm/miceking/miceking1506/miceking150600428/40805956-stock-vector-cat-silhouette-moon.jpg?ver=6">
     </div>
     <div class="card">
       <p class="card-title" id="sub-header">Experience:</p>
@@ -96,7 +98,7 @@
   font-size: 16px;
   color: #676767;
 }
-.cats-show #connect-btn {
+.cats-show #action-buttons {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -117,8 +119,8 @@
 }
 .cats-show #profile-img-location img {
   height:160px;
-  with:160px;
-  border-radius: 50%;
+  width:160px;
+  border-radius: 100px;
 }
 </style>
 
@@ -138,7 +140,7 @@ export default {
         location: "",
         owner: "",
         summary: "",
-        profile_url: "",
+        profile_url: null,
         accomplishments: "",
         endorsements: "",
         skills: "",
