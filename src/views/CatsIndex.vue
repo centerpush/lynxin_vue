@@ -25,6 +25,7 @@
 
 .cats-index .card {
   opacity: 0.95;
+  width: ;
 }
 
 .cats-index .card:hover {
