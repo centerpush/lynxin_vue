@@ -5,17 +5,23 @@
         <img id="banner-image" src="http://www.wishbonespetcare.com/LRGpawprintbanner.png" alt="doesn't work">
       </div>
       <div class="card">
-        <p class="card-title" id="first-family-name">{{ cat.first_name  }} {{  cat.family_name}}</p>
-        <p class="card-text" id="title">{{ cat.title }}</p>
-        <p class="card-text" id="location">{{ cat.location }}</p>
-        <p class="card-text">Owner: {{ cat.owner }}</p>
-        <div id="connect-btn" class="text-right">
-          <button v-on:click="connect()" class="btn btn-primary">Connect</button>
+        <div class="row">
+          <div class="col">
+            <p class="card-title" id="first-family-name">{{ cat.first_name  }} {{  cat.family_name}}</p>
+            <p class="card-text" id="title">{{ cat.title }}</p>
+            <p class="card-text" id="location">{{ cat.location }}</p>
+            <p class="card-text">Owner: {{ cat.owner }}</p>
+          </div>
+          <div class="col">
+            <div id="connect-btn">
+              <button v-on:click="connect()" class="btn btn-primary">Connect</button>
+            </div>
+          </div>
         </div>
         <div id="accordion">
           <div>
             <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
+              <h5 class="mb-0 text-center">
                 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   Summary: 
                 </button>
@@ -31,7 +37,8 @@
       </div>
     </div>
     <div id="profile-img-location">
-      <img src="https://us.123rf.com/450wm/miceking/miceking1506/miceking150600428/40805956-stock-vector-cat-silhouette-moon.jpg?ver=6">
+      <img v-if="cat.profile_url" class="profile-img shadow-lg" :src="cat.profile_url">
+      <img v-else class="profile-img shadow-lg" src="https://us.123rf.com/450wm/miceking/miceking1506/miceking150600428/40805956-stock-vector-cat-silhouette-moon.jpg?ver=6">
     </div>
     <div class="card">
       <p class="card-title" id="sub-header">Experience:</p>
@@ -40,7 +47,6 @@
       <p class="card-title" id="sub-header">Education:</p>
       <p class="card-text">{{ cat.education }}</p>
     </div>
-
     <div class="card">
       <p class="card-title" id="sub-header">Skills:</p>
       <p class="card-text">{{ cat.skills }}</p>
@@ -91,8 +97,11 @@
   color: #676767;
 }
 .cats-show #connect-btn {
-  margin-right: 25px;
-  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right:35px;
+  margin-bottom: 5px;
 }
 .cats-show #sub-header {
   font-size: 24px;

@@ -40,7 +40,7 @@
           <input class='form-control' type='text' v-model="cat.summary" placeholder="Summary">
         </div>
         <div class="form-group">
-          <label>Profile: </label>
+          <label>Profile Picture URL: </label>
           <input class='form-control' type='text' v-model="cat.profile_url" placeholder="Profile url">
         </div>
         <div class="form-group">
