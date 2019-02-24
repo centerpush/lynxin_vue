@@ -10,8 +10,7 @@
               <router-link v-bind:to="'/cats/' + cat.id">
                 <img class="card-img-top rounded mx-auto d-block img-thumbnail" v-bind:src="cat.profile_url" v-bind:alt="cat.first_name">
               </router-link>
-              <p class="card-text mt-1">{{ cat.summary }}</p>
-            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -19,11 +18,19 @@
 </template>
 
 <style>
-.card-img-top {
+.cats-index .card-img-top {
   height: 225px;
   width: 250px;
 }
 
+.cats-index .card {
+  opacity: 0.99;
+}
+
+.cats-index .card:hover {
+  box-shadow: 8px 8px 35px 3px whitesmoke;
+  opacity: 1;
+}
 </style>
 
 <script>
