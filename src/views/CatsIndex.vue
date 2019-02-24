@@ -3,12 +3,15 @@
     <div class="card-deck">
       <div class="col-md-4" v-for="cat in cats">
         <div class="card mt-3">
-          <h2 class="card-title text-center" > {{ cat.first_name }}</h2>
-          <p class="card-text">{{ cat.title }}</p>
-          <router-link v-bind:to="'/cats/' + cat.id">
-            <img class="card-img-top" v-bind:src="cat.profile_url" v-bind:alt="cat.first_name">
-          </router-link>
-          <p class="card-text">{{ cat.summary }}</p>
+          <img class="card-img" src="https://www.toptal.com/designers/subtlepatterns/patterns/leaves.png">
+            <div class="card-img-overlay"> 
+              <h2 class="card-title text-center" > {{ cat.first_name }}</h2>
+              <p class="card-text ">{{ cat.title }}</p>
+              <router-link v-bind:to="'/cats/' + cat.id">
+                <img class="card-img-top rounded mx-auto d-block img-thumbnail" v-bind:src="cat.profile_url" v-bind:alt="cat.first_name">
+              </router-link>
+              <p class="card-text mt-1">{{ cat.summary }}</p>
+            </div>
         </div>
       </div>
     </div>
@@ -16,7 +19,7 @@
 </template>
 
 <style>
-img{
+.card-img-top {
   height: 225px;
   width: 250px;
 }
