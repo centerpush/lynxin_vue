@@ -14,10 +14,10 @@
           </div>
           <div class="col">
             <div id="action-buttons">
-              <button v-on:click="connect()" class="btn btn-primary">Connect</button>
-              <button v-on:click="edit()" class="btn btn-primary">Edit Profile</button>
+              <button v-on:click="connect()" class="btn btn-primary main-button">Connect</button>
+              <button v-on:click="edit()" class="btn btn-primary main-button">Edit Profile</button>
               <router-link v-bind:to="'/cats/' + cat.id + '/catnections'">
-                <button class="btn btn-primary">Catnections</button>
+                <button class="btn btn-primary main-button">Catnections</button>
               </router-link>
             </div>
           </div>
@@ -123,6 +123,9 @@
   height:160px;
   width:160px;
   border-radius: 100px;
+}
+.cats-show .main-button {
+  margin-right: 8px;
 }
 </style>
 
