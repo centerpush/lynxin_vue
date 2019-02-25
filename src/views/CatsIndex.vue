@@ -2,13 +2,13 @@
   <div class="cats-index">
     <div class="card-deck">
       <div class="col-md-4" v-for="cat in cats">
-        <div class="card mt-3 bg-light">
-          <h2 class="card-title mt-2 text-center" > {{ cat.first_name }}</h2>
-          <p class="card-text ">{{ cat.title }}</p>
-          <router-link v-bind:to="'/cats/' + cat.id">
-          <img class="card-img-top rounded mx-auto d-block img-thumbnail mb-3" v-bind:src="cat.profile_url"  v-bind:alt="cat.first_name">
-          </router-link>
-        </div>
+        <router-link v-bind:to="'/cats/' + cat.id">
+          <div class="card mt-3 bg-light">
+            <h2 class="card-title mt-2 text-center" > {{ cat.first_name }}</h2>
+            <p class="card-text ">{{ cat.title }}</p>
+            <img class="card-img-top rounded mx-auto d-block img-thumbnail mb-3" v-bind:src="cat.profile_url"  v-bind:alt="cat.first_name">
+          </div>
+        </router-link>
       </div>
     </div>
   </div>
