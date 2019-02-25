@@ -40,7 +40,7 @@
           <input class='form-control' type='text' v-model="cat.summary" placeholder="Summary">
         </div>
         <div class="form-group">
-          <label>Profile Picture URL: </label>
+          <label>Profile: </label>
           <input class='form-control' type='text' v-model="cat.profile_url" placeholder="Profile url">
         </div>
         <div class="form-group">
@@ -65,7 +65,6 @@
 
 <style>
 .btn{
-  position: relative;
   align-self: center;
 }
 </style>
@@ -87,6 +86,7 @@ export default {
               owner: "",
               summary: "",
               profile_url: "",
+              profile_picture: "",
               accomplishments: "",
               endorsements: "",
               skills: "",
@@ -103,6 +103,11 @@ export default {
       })
   },
   methods: {
+    setFile: function(event) {
+         if (event.target.files.length > 0) {
+           this.image = event.target.files[0];
+         }
+       },
     submit: function() {
       var params = {
                     first_name: this.cat.first_name,
@@ -114,18 +119,16 @@ export default {
                     owner: this.cat.owner,
                     summary: this.cat.summary,
                     profile_url: this.cat.profile_url,
+                    profile_picture: this.cat.profile_picture,
                     accomplishments: this.cat.accomplishments,
                     endorsements: this.cat.endorsements,
                     skills: this.cat.skills,
                     user_id: this.cat.user_id
                     };
-      console.log("====================================")
-      console.log(params)
-      console.log(this.cat)
-      console.log("====================================")
       axios.patch("/api/cats/" + this.cat.id, params)
         .then(response => {
           this.$router.push("/cats/" + this.cat.id);
+          this.$refs.fileInput.value = "";
         }).catch(error => {
           this.errors = error.response.data.errors;
         });

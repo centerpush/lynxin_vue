@@ -1,29 +1,27 @@
 <template>
   <div class="cats-connections">
-    <div class="container"> <h1> {{ cat.first_name }} {{ cat.family_name }}'s Followers </h1> </div>
+    <div class="container"> <h4> {{ cat.first_name }} {{ cat.family_name }}'s Followers </h4> </div>
     <div class="card-deck"> 
       <div class="col-md-4" v-for="follower in cat.followers"> 
-        <div class="card mt-3">
-          <h2 class="card-title text-center"> {{follower.first_name}} </h2>
+        <div class="card mt-3 bg-light">
+          <h2 class="card-title mt-2 text-center"> {{follower.first_name}} </h2>
             <p class="card-text">{{ follower.title }}</p>
             <router-link v-bind:to="'/cats/' + follower.id">
-              <img class="card-img-top" v-bind:src="follower.profile_url" v-bind:alt="follower.first_name">
+              <img class="card-img-top rounded mx-auto d-block img-thumbnail mb-3" v-bind:src="follower.profile_url" v-bind:alt="follower.first_name">
             </router-link>
-            <p class="card-text">{{ follower.summary }}</p>
         </div>
       </div>
     </div>
 
-    <div class="container"> <h1> {{ cat.first_name }} {{ cat.family_name }} is following these cats: </h1> </div>
+    <div class="container"> <h4> {{ cat.first_name }} {{ cat.family_name }} follows: </h4> </div>
     <div class="card-deck"> 
       <div class="col-md-4" v-for="followee in cat.followees"> 
-        <div class="card mt-3">
-          <h2 class="card-title text-center"> {{followee.first_name}} </h2>
+        <div class="card mt-3 bg-light">
+          <h2 class="card-title mt-2 text-center"> {{followee.first_name}} </h2>
             <p class="card-text">{{ followee.title }}</p>
             <router-link v-bind:to="'/cats/' + followee.id">
-              <img class="card-img-top" v-bind:src="followee.profile_url" v-bind:alt="followee.first_name">
+              <img class="card-img-top rounded mx-auto d-block img-thumbnail mb-3" v-bind:src="followee.profile_url" v-bind:alt="followee.first_name">
             </router-link>
-            <p class="card-text">{{ followee.summary }}</p>
         </div>
       </div>
     </div>
@@ -31,8 +29,19 @@
 </template>
 
 <style>
-.class {
-  background-color: white;
+.cats-index .card-img-top{
+  height: 225px;
+  width: 250px;
+}
+
+.cats-index .card {
+  opacity: 0.95;
+  width: ;
+}
+
+.cats-index .card:hover {
+  box-shadow: 8px 8px 35px 3px whitesmoke;
+  opacity: 1;
 }
 </style>
 
