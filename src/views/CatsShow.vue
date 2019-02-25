@@ -16,6 +16,9 @@
             <div id="action-buttons">
               <button v-on:click="connect()" class="btn btn-primary">Connect</button>
               <button v-on:click="edit()" class="btn btn-primary">Edit Profile</button>
+              <router-link v-bind:to="'/cats/' + cat.id + '/catnections'">
+                <button class="btn btn-primary">Catnections</button>
+              </router-link>
             </div>
           </div>
         </div>
