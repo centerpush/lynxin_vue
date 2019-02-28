@@ -104,6 +104,7 @@ export default {
   },
   methods: {
     submit: function() {
+      console.log(this.cat.first_name);
       var params = {
                     first_name: this.cat.first_name,
                     family_name: this.cat.family_name,
